@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Che film guardiamo">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>Che film guardiamo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/firebase@10.14.1/firebase-app-compat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/firebase@10.14.1/firebase-firestore-compat.js"></script>
+<style>
+  :root {
+    --bg: #16141a;
+    --surface: #1f1c24;
+    --surface-2: #26222c;
+    --text: #f3ede1;
+    --muted: #a89e8f;
+    --gold: #cf9d3f;
+    --wine: #7a1f2b;
+    --wine-bright: #a92f3d;
+    --line: #35313b;
+    --good: #4f8a5b;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16141a; --surface: #1f1c24; --surface-2: #26222c; --text: #f3ede1;
+      --muted: #a89e8f; --gold: #cf9d3f; --wine: #7a1f2b; --wine-bright: #a92f3d; --line: #35313b;
+    }
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); height: 100%; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  input, select, textarea { font-size: 16px; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 20px 18px 48px; }
+
+  header.top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: 14px 4px 22px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 22px;
+    position: relative;
+  }
+  header.top h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 0.2px;
+  }
+  header.top h1 em { font-style: italic; color: var(--gold); }
+  .header-right { display: flex; align-items: center; gap: 10px; }
+  .count { font-size: 0.8rem; color: var(--muted); }
+  .icon-btn {
+    background: var(--surface); border: 1px solid var(--line); color: var(--text);
+    width: 34px; height: 34px; border-radius: 10px; font-size: 1.05rem; line-height: 1;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .burger-menu {
+    position: absolute; top: calc(100% - 8px); right: 0;
+    background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+    display: none; flex-direction: column; min-width: 180px; overflow: hidden; z-index: 500;
+  }
+  .burger-menu.open { display: flex; }
+  .burger-menu .menu-item {
+    background: none; border: none; border-bottom: 1px solid var(--line); color: var(--text);
+    text-align: left; padding: 13px 16px; font-family: inherit; font-size: 0.86rem; cursor: pointer;
+  }
+  .burger-menu .menu-item:last-child { border-bottom: none; }
+  .burger-menu .menu-item:active { background: var(--surface); }
+
+  nav.tabs { display: flex; gap: 6px; margin-bottom: 22px; }
+  nav.tabs button {
+    flex: 1; padding: 10px 8px; border-radius: 10px; border: 1px solid var(--line);
+    background: var(--surface); color: var(--muted); font-family: inherit; font-size: 0.88rem;
+    font-weight: 600; cursor: pointer; transition: color .15s, border-color .15s;
+  }
+  nav.tabs button.active { color: var(--text); border-color: var(--gold); }
+
+  section.view { display: none; }
+  section.view.active { display: block; }
+
+  /* --- Picker --- */
+  .stage {
+    background: linear-gradient(160deg, var(--surface), var(--surface-2));
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 34px 22px;
+    text-align: center;
+    min-height: 230px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .stage::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(207,157,63,0.10), transparent 60%);
+    pointer-events: none;
+  }
+  .empty-msg { color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
+  .empty-msg b { color: var(--text); }
+
+  .reel { font-size: 0.72rem; letter-spacing: 0.06em; color: var(--gold); margin-bottom: 10px; font-weight: 600; }
+  .film-title {
+    font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.7rem; line-height: 1.2;
+    margin: 0 0 10px;
+  }
+  .film-meta { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 4px; }
+  .badge {
+    font-size: 0.75rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line);
+    color: var(--muted);
+  }
+  .badge.author { border-color: var(--gold); color: var(--gold); }
+
+  .actions { display: flex; gap: 10px; margin-top: 22px; }
+  .actions.stack { flex-direction: column; }
+  button.btn {
+    font-family: inherit; font-weight: 600; font-size: 0.92rem; border-radius: 12px; border: none;
+    padding: 13px 16px; cursor: pointer; transition: transform .08s, opacity .15s;
+  }
+  button.btn:active { transform: scale(0.97); }
+  .btn-primary { background: var(--wine-bright); color: #fff; flex: 2; }
+  .btn-primary:hover { background: var(--wine); }
+  .btn-secondary { background: var(--surface-2); color: var(--text); border: 1px solid var(--line); flex: 1; }
+  .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+  .btn-gold { background: var(--gold); color: #241c0d; }
+  button.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .pick-controls { margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .toggle-row { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--muted); }
+  .toggle-row input { accent-color: var(--gold); }
+
+  .note-box {
+    margin-top: 14px; font-size: 0.78rem; color: var(--muted); background: var(--surface);
+    border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; text-align: left;
+  }
+
+  /* --- History --- */
+  .hist-list { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+  .hist-item {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  .hist-item .who { color: var(--gold); font-size: 0.75rem; }
+  .when { color: var(--muted); font-size: 0.72rem; }
+
+  /* --- Library --- */
+  .lib-toolbar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .lib-toolbar .btn { flex: 1; min-width: 130px; }
+  input[type=file] { display: none; }
+
+  .lib-search {
+    width: 100%; padding: 11px 14px; border-radius: 10px; background: var(--surface);
+    border: 1px solid var(--line); color: var(--text); font-family: inherit;
+  }
+  .lib-toolbar .lib-search { flex: 1 1 60%; min-width: 160px; }
+  .lib-sort-select {
+    flex: 1 1 140px; min-width: 140px; padding: 11px 10px; border-radius: 10px; background: var(--surface);
+    border: 1px solid var(--line); color: var(--text); font-family: inherit;
+  }
+  .sort-btn.active { color: var(--text); border-color: var(--gold); }
+
+  .card-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; margin-bottom: 12px; }
+  .card-head h2 { margin: 0; }
+  .chip-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip {
+    background: var(--surface-2); border: 1px solid var(--line); color: var(--muted);
+    font-family: inherit; font-size: 0.7rem; padding: 6px 11px; border-radius: 999px; cursor: pointer;
+    white-space: nowrap;
+  }
+  .chip:active { color: var(--text); border-color: var(--gold); }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px;
+    margin-bottom: 22px;
+  }
+  .card h2 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.05rem; margin: 0 0 12px; }
+
+  .movie-row {
+    display: flex; gap: 12px; align-items: flex-start;
+    border-bottom: 1px solid var(--line); padding: 12px 0;
+  }
+  .movie-row:last-child { border-bottom: none; }
+  .movie-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+  .poster {
+    width: 46px; height: 66px; object-fit: contain; border-radius: 6px;
+    background: var(--surface-2); flex-shrink: 0;
+  }
+  .poster.placeholder {
+    display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+  }
+  .movie-row input, .movie-row select {
+    background: var(--surface-2); border: 1px solid var(--line); color: var(--text);
+    padding: 8px 10px; border-radius: 8px; font-family: inherit; width: 100%;
+  }
+  .row-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 6px; }
+  .row-grid2 { display: grid; grid-template-columns: 1fr 70px; gap: 6px; }
+  .row-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 2px; }
+  .watched-pill { font-size: 0.72rem; padding: 3px 8px; border-radius: 999px; }
+  .watched-pill.yes { background: rgba(79,138,91,0.2); color: var(--good); }
+  .watched-pill.no { background: var(--surface-2); color: var(--muted); }
+  .link-btn { background: none; border: none; color: var(--wine-bright); font-family: inherit; font-size: 0.78rem; cursor: pointer; font-weight: 600; padding: 4px; }
+  .link-btn.muted { color: var(--muted); }
+
+  .field-label { font-size: 0.68rem; color: var(--muted); margin-bottom: 2px; display: block; }
+
+  .authors-check-list { display: flex; flex-direction: column; gap: 8px; margin: 6px 0 10px; }
+  .author-check { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--text); }
+  .author-check input { accent-color: var(--gold); width: 17px; height: 17px; }
+
+  .import-map { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+  .import-map label { font-size: 0.82rem; color: var(--muted); }
+  .import-map select { width: 100%; padding: 9px; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--line); color: var(--text); font-family: inherit; }
+
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+    display: none; align-items: center; justify-content: center;
+    z-index: 1000; padding: 20px;
+    padding-top: calc(20px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: var(--surface); border-radius: 16px; max-width: 92vw; width: 420px;
+    max-height: 85vh; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  }
+  .dialog-body { padding: 20px; }
+  .dialog-body h3 { font-family: 'Fraunces', serif; margin-top: 0; }
+
+  .rate-row { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+  .rate-person { display: flex; align-items: center; gap: 10px; font-size: 0.82rem; color: var(--muted); flex-wrap: wrap; }
+  .rate-person .who-name { min-width: 60px; }
+  .rate-buttons { display: flex; gap: 5px; }
+  .rate-btn {
+    width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line);
+    background: var(--surface-2); color: var(--muted); font-size: 0.78rem; font-weight: 700;
+    cursor: pointer; font-family: inherit; padding: 0;
+  }
+  .rate-btn.active { background: var(--gold); color: #241c0d; border-color: var(--gold); }
+  .avg-badge { border-color: var(--gold); color: var(--gold); }
+
+  .rated-row { position: relative; padding-right: 42px; }
+  .trash-btn {
+    position: absolute; top: 10px; right: 10px;
+    background: var(--surface-2); border: 1px solid var(--line); color: var(--wine-bright);
+    width: 28px; height: 28px; border-radius: 8px; font-size: 0.85rem; line-height: 1;
+    cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;
+  }
+  .trash-btn:active { background: var(--wine); color: #fff; }
+
+  .empty-lib { text-align: center; color: var(--muted); padding: 30px 10px; font-size: 0.9rem; }
+  .footer-tip { text-align: center; color: var(--muted); font-size: 0.75rem; margin-top: 30px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Che film <em>guardiamo</em></h1>
+    <div class="header-right">
+      <span class="count" id="movieCount">0 film</span>
+      <button class="icon-btn" id="burgerBtn" aria-label="Menu">☰</button>
+      <div class="burger-menu" id="burgerMenu">
+        <button class="menu-item" id="btnOpenProfiles">Gestisci profili</button>
+        <button class="menu-item" id="btnExportXlsx">Esporta Excel</button>
+        <button class="menu-item" id="btnExportJson">Backup dati</button>
+        <button class="menu-item" id="btnImportJson">Importa backup</button>
+      </div>
+    </div>
+    <input type="file" id="jsonInput" accept="application/json,.json">
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-view="pick">Scegli</button>
+    <button class="tab-btn" data-view="library">Libreria</button>
+    <button class="tab-btn" data-view="history">Storico</button>
+    <button class="tab-btn" data-view="ratings">Voti</button>
+  </nav>
+
+  <!-- PICK VIEW -->
+  <section class="view active" id="view-pick">
+    <div class="stage" id="stage">
+      <div class="empty-msg">Nessun film in libreria ancora.<br><b>Vai su "Libreria"</b> per importare il tuo Excel o aggiungere film a mano.</div>
+    </div>
+
+    <div class="pick-controls">
+      <label class="toggle-row">
+        <input type="checkbox" id="includeWatched">
+        Includi anche i film singoli già visti
+      </label>
+    </div>
+
+    <div id="constraintNote"></div>
+  </section>
+
+  <!-- LIBRARY VIEW -->
+  <section class="view" id="view-library">
+    <div class="lib-toolbar">
+      <button class="btn btn-gold" id="btnImport">Importa Excel / CSV</button>
+      <input type="file" id="fileInput" accept=".xlsx,.xls,.csv">
+      <button class="btn btn-secondary" id="btnAddMovie">+ Aggiungi film</button>
+    </div>
+
+    <div class="lib-toolbar">
+      <input type="text" id="librarySearch" class="lib-search" placeholder="Cerca un film per titolo, autore o saga...">
+      <select id="librarySortSelect" class="lib-sort-select">
+        <option value="default">Predefinito</option>
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2>Film in libreria</h2>
+        <div class="chip-row">
+          <button class="chip" id="btnResetWatched">Segna tutti da vedere</button>
+          <button class="chip" id="btnRetryPosters">Ritenta copertine</button>
+        </div>
+      </div>
+      <div id="movieList"></div>
+      <div class="empty-lib" id="emptyLibMsg">Nessun film ancora.</div>
+    </div>
+  </section>
+
+  <!-- HISTORY VIEW -->
+  <section class="view" id="view-history">
+    <div class="card">
+      <h2>Ultimi visti</h2>
+      <div class="hist-list" id="histList"></div>
+      <div class="empty-lib" id="emptyHistMsg">Non avete ancora segnato nessun film come visto.</div>
+    </div>
+    <div class="lib-toolbar">
+      <button class="btn btn-ghost" id="btnUndo">Annulla ultima visione</button>
+    </div>
+  </section>
+
+  <!-- RATINGS VIEW -->
+  <section class="view" id="view-ratings">
+    <div class="card">
+      <h2>Voti dei film visti</h2>
+      <div id="ratingsList"></div>
+      <div class="empty-lib" id="emptyRatingsMsg">Nessun film visto ancora da valutare.</div>
+    </div>
+  </section>
+
+  <div class="footer-tip">
+    <span id="storageStatus">Non ancora salvato</span>
+    <span id="syncStatus" style="display:none; margin-left:8px;"></span>
+  </div>
+</div>
+
+<div class="modal-overlay" id="mapDialog">
+  <div class="modal-box">
+  <div class="dialog-body">
+    <h3>Abbina le colonne</h3>
+    <p style="color:var(--muted);font-size:0.85rem;margin-top:-6px;">Dicci a quale colonna del tuo file corrisponde ogni campo.</p>
+    <div class="import-map">
+      <div><label>Titolo del film *</label><select id="mapTitle"></select></div>
+      <div><label>Autore (chi l'ha inserito)</label><select id="mapAuthor"></select></div>
+      <div><label>Saga / serie (vuoto se film singolo)</label><select id="mapSaga"></select></div>
+      <div><label>Numero nella saga (opzionale)</label><select id="mapOrder"></select></div>
+    </div>
+    <div class="actions" style="margin-top:20px;">
+      <button class="btn btn-secondary" id="mapCancel" style="flex:1;">Annulla</button>
+      <button class="btn btn-primary" id="mapConfirm" style="flex:1;">Importa</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="profilesDialog">
+  <div class="modal-box">
+  <div class="dialog-body">
+    <h3>Profili</h3>
+    <p style="color:var(--muted);font-size:0.85rem;margin-top:-6px;">Le persone tra cui scegliere quando aggiungi un film o dai un voto.</p>
+    <div id="profilesList" style="display:flex;flex-direction:column;gap:8px;margin:14px 0;"></div>
+    <div style="display:flex;gap:8px;">
+      <input type="text" id="newProfileName" placeholder="Nome nuovo profilo" style="flex:1;">
+      <button class="btn btn-primary" id="btnAddProfile" style="flex:0 0 auto;padding:11px 16px;">Aggiungi</button>
+    </div>
+    <div class="actions" style="margin-top:20px;">
+      <button class="btn btn-secondary" id="profilesClose" style="flex:1;">Chiudi</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="editDialog">
+  <div class="modal-box">
+  <div class="dialog-body">
+    <h3 id="editTitle">Modifica film</h3>
+    <div class="import-map">
+      <div><label class="field-label">Titolo</label><input id="editFieldTitle" type="text"></div>
+      <div><label class="field-label">Chi lo aggiunge (puoi selezionarne più di uno)</label>
+        <div id="editAuthorsList" class="authors-check-list"></div>
+        <button type="button" class="link-btn" id="editAddProfileInline">+ Nuovo profilo</button>
+      </div>
+      <div><label class="field-label">Saga (opzionale)</label><input id="editFieldSaga" type="text"></div>
+        <div><label class="field-label">Numero nella saga (opzionale)</label>
+          <select id="editFieldOrder"><option value="">— nessuno —</option></select>
+        </div>
+    </div>
+    <div class="actions" style="margin-top:20px;">
+      <button class="btn btn-secondary" id="editCancel" style="flex:1;">Annulla</button>
+      <button class="btn btn-primary" id="editSave" style="flex:1;">Salva</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var STORAGE_KEY = "filmrandom_data_v1";
+  var state = { movies: [], history: [] };
+  var lastPicked = null;
+  var pendingImport = null; // {headers, rows}
+
+  function uid(){ return 'm' + Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+
+  // --- Offer a generated file to the viewer: use the claude.ai downloads
+  // capability when present (inside claude.ai artifacts), otherwise fall
+  // back to a normal browser download (works once hosted elsewhere, e.g. Netlify) ---
+  function classicDownload(filename, blob){
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+  }
+  function offerDownload(filename, blob){
+    return (async function(){
+      try {
+        if (window.claude && window.claude.use) {
+          var downloads = await window.claude.use('downloads');
+          if (downloads) { await downloads.save({ filename: filename, data: blob }); return; }
+        }
+        classicDownload(filename, blob);
+      } catch(e) {
+        if (e && e.code === 'declined') return;
+        console.error('download error', e);
+        // if the capability path failed for a reason other than a user decline, try the classic method as a last resort
+        try { classicDownload(filename, blob); }
+        catch(e2) { alert('Non sono riuscito a salvare il file.'); }
+      }
+    })();
+  }
+
+
+  // --- IndexedDB helpers (more reliable than localStorage for iOS home-screen apps) ---
+  function openDB(){
+    return new Promise(function(resolve, reject){
+      if (!window.indexedDB) { reject(new Error('no indexeddb')); return; }
+      var req = indexedDB.open('filmrandom_db', 1);
+      req.onupgradeneeded = function(e){
+        var db = e.target.result;
+        if (!db.objectStoreNames.contains('kv')) db.createObjectStore('kv');
+      };
+      req.onsuccess = function(e){ resolve(e.target.result); };
+      req.onerror = function(e){ reject(e); };
+    });
+  }
+  function idbGet(key){
+    return openDB().then(function(db){
+      return new Promise(function(resolve, reject){
+        var tx = db.transaction('kv', 'readonly');
+        var req = tx.objectStore('kv').get(key);
+        req.onsuccess = function(){ resolve(req.result); };
+        req.onerror = function(e){ reject(e); };
+      });
+    });
+  }
+  function idbSet(key, value){
+    return openDB().then(function(db){
+      return new Promise(function(resolve, reject){
+        var tx = db.transaction('kv', 'readwrite');
+        tx.objectStore('kv').put(value, key);
+        tx.oncomplete = function(){ resolve(true); };
+        tx.onerror = function(e){ reject(e); };
+      });
+    });
+  }
+
+  function normalizeState(){
+    if (!Array.isArray(state.movies)) state.movies = [];
+    if (!Array.isArray(state.history)) state.history = [];
+    if (!Array.isArray(state.profiles)) state.profiles = [];
+    state.movies.forEach(function(m){
+      if (!Array.isArray(m.authors)) {
+        m.authors = m.author ? String(m.author).split(',').map(function(s){ return s.trim(); }).filter(Boolean) : [];
+      }
+    });
+    state.history.forEach(function(h){
+      if (!Array.isArray(h.authors)) {
+        h.authors = h.author ? [h.author] : [];
+      }
+    });
+    var seen = {};
+    state.profiles.forEach(function(p){ seen[p] = true; });
+    state.movies.forEach(function(m){
+      m.authors.forEach(function(a){ if (a && !seen[a]) { seen[a] = true; state.profiles.push(a); } });
+    });
+    state.profiles.sort();
+  }
+
+  function load(){
+    return idbGet(STORAGE_KEY).then(function(fromIdb){
+      if (fromIdb && Array.isArray(fromIdb.movies)) { state = fromIdb; normalizeState(); return; }
+      // migrate from old localStorage-only version, if present
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          var parsed = JSON.parse(raw);
+          if (parsed && Array.isArray(parsed.movies)) { state = parsed; }
+        }
+      } catch(e) { console.error("load error", e); }
+      normalizeState();
+    }).catch(function(e){
+      console.error("indexeddb load error", e);
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          var parsed = JSON.parse(raw);
+          if (parsed && Array.isArray(parsed.movies)) state = parsed;
+        }
+      } catch(e2) { console.error("load fallback error", e2); }
+      normalizeState();
+    });
+  }
+
+  // ---------- Optional real-time sync (Firebase Firestore) ----------
+  // Fill these in once you've created a free Firebase project (console.firebase.google.com)
+  // and copied the "firebaseConfig" object it gives you for a Web App. Leave apiKey empty
+  // to keep the app fully local/offline, exactly as before.
+  var FIREBASE_CONFIG = {
+    apiKey: "AIzaSyCiI04bfwrbnLWLFEYF8B_mHMLTHmuMags",
+    authDomain: "film-random-11d57.firebaseapp.com",
+    projectId: "film-random-11d57",
+    storageBucket: "film-random-11d57.firebasestorage.app",
+    messagingSenderId: "272803744061",
+    appId: "1:272803744061:web:b9c0cbadd9a0d2f3d55d54"
+  };
+  var SYNC_COLLECTION = "filmrandom";
+  var SYNC_DOC = "shared";
+
+  var syncEnabled = !!(FIREBASE_CONFIG.apiKey && FIREBASE_CONFIG.projectId);
+  var syncDocRef = null;
+  if (syncEnabled) {
+    try {
+      firebase.initializeApp(FIREBASE_CONFIG);
+      syncDocRef = firebase.firestore().collection(SYNC_COLLECTION).doc(SYNC_DOC);
+    } catch(e) {
+      console.error('firebase init failed', e);
+      syncEnabled = false;
+      syncDocRef = null;
+    }
+  }
+  function setSyncStatus(ok){
+    var el = document.getElementById('syncStatus');
+    if (!el) return;
+    if (!syncEnabled) { el.style.display = 'none'; return; }
+    el.style.display = 'block';
+    var now = new Date().toLocaleTimeString('it-IT', { hour:'2-digit', minute:'2-digit' });
+    el.textContent = ok ? ('🔄 Sincronizzato alle ' + now) : ('⚠️ Sincronizzazione non riuscita (' + now + ')');
+    el.style.color = ok ? 'var(--muted)' : 'var(--wine-bright)';
+  }
+  function initSync(){
+    if (!syncEnabled || !syncDocRef) return;
+    syncDocRef.onSnapshot(function(snap){
+      if (snap.exists) {
+        var remote = snap.data();
+        if (remote && Array.isArray(remote.movies)) {
+          state = remote;
+          normalizeState();
+          saveLocalOnly();
+          renderAll();
+        }
+      } else {
+        // no shared document yet: this device becomes the initial source of truth
+        syncDocRef.set(state).catch(function(e){ console.error('initial sync push failed', e); });
+      }
+      setSyncStatus(true);
+    }, function(err){
+      console.error('firestore snapshot error', err);
+      setSyncStatus(false);
+    });
+  }
+
+  function saveLocalOnly(){
+    var ok = true;
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+    catch(e) { ok = false; console.error("localStorage save error", e); }
+    idbSet(STORAGE_KEY, state).then(function(){
+      setSaveStatus(true);
+    }).catch(function(e){
+      console.error("indexeddb save error", e);
+      setSaveStatus(ok);
+    });
+  }
+  function save(){
+    saveLocalOnly();
+    if (syncEnabled && syncDocRef) {
+      syncDocRef.set(state).then(function(){ setSyncStatus(true); })
+        .catch(function(e){ console.error('firestore set failed', e); setSyncStatus(false); });
+    }
+  }
+  function setSaveStatus(ok){
+    var el = document.getElementById('storageStatus');
+    if (!el) return;
+    var now = new Date().toLocaleTimeString('it-IT', { hour:'2-digit', minute:'2-digit' });
+    el.textContent = ok ? ('Salvato alle ' + now) : ('Attenzione: salvataggio non riuscito (' + now + ')');
+    el.style.color = ok ? 'var(--muted)' : 'var(--wine-bright)';
+  }
+
+  function normSaga(s){ return (s||"").trim().toLowerCase(); }
+
+  // returns eligible movies given includeWatched toggle
+  function activeMovies(){
+    return state.movies.filter(function(m){ return !m.deletedFromLibrary; });
+  }
+
+  function getEligible(includeWatched){
+    var pool = activeMovies();
+    var sagas = {};
+    pool.forEach(function(m){
+      var key = normSaga(m.saga);
+      if (!key) return;
+      if (!sagas[key]) sagas[key] = [];
+      sagas[key].push(m);
+    });
+    Object.keys(sagas).forEach(function(k){
+      sagas[k].sort(function(a,b){
+        var ao = (a.order===null||a.order===undefined||a.order==='') ? 999999 : Number(a.order);
+        var bo = (b.order===null||b.order===undefined||b.order==='') ? 999999 : Number(b.order);
+        return ao - bo;
+      });
+    });
+
+    var eligible = [];
+    pool.forEach(function(m){
+      var key = normSaga(m.saga);
+      if (key) {
+        var seq = sagas[key];
+        var nextIdx = seq.findIndex(function(x){ return !x.watched; });
+        if (nextIdx !== -1 && seq[nextIdx].id === m.id) eligible.push(m);
+      } else {
+        if (!m.watched || includeWatched) eligible.push(m);
+      }
+    });
+    return eligible;
+  }
+
+  function authorsKey(arr){ return (arr||[]).slice().sort().join('|'); }
+  function authorsLabel(arr){ return (arr && arr.length) ? arr.join(', ') : '—'; }
+
+  function getLastAuthorKeys(n){
+    return state.history.slice(-n).map(function(h){ return authorsKey(h.authors); });
+  }
+
+  function pickCandidate(){
+    var includeWatched = document.getElementById('includeWatched').checked;
+    var eligible = getEligible(includeWatched);
+    if (eligible.length === 0) return { list: [], note: "" };
+
+    var last3 = getLastAuthorKeys(3);
+    var note = "";
+    if (last3.length === 3 && last3[0] && last3[0] === last3[1] && last3[1] === last3[2]) {
+      var streakKey = last3[0];
+      var filtered = eligible.filter(function(m){ return authorsKey(m.authors) !== streakKey; });
+      if (filtered.length > 0) {
+        var sample = eligible.find(function(m){ return authorsKey(m.authors) === streakKey; });
+        note = '"' + (sample ? authorsLabel(sample.authors) : "Sconosciuto") + '" ha scelto le ultime 3 volte, quindi questa volta è il turno di qualcun altro.';
+        eligible = filtered;
+      } else {
+        note = "Toccherebbe cambiare, ma non ci sono altri film disponibili al momento.";
+      }
+    }
+    return { list: eligible, note: note };
+  }
+
+  function renderStage(){
+    var stage = document.getElementById('stage');
+    var noteBox = document.getElementById('constraintNote');
+    if (state.movies.length === 0) {
+      stage.innerHTML = '<div class="empty-msg">Nessun film in libreria ancora.<br><b>Vai su "Libreria"</b> per importare il tuo Excel o aggiungere film a mano.</div>';
+      noteBox.innerHTML = "";
+      return;
+    }
+    if (!lastPicked) {
+      var res = pickCandidate();
+      stage.innerHTML = '<div class="empty-msg">Pronti per la serata?<br><b>' + res.list.length + '</b> film disponibili adesso.</div>' +
+        '<div class="actions" style="margin-top:22px;"><button class="btn btn-primary" id="btnRoll" ' + (res.list.length===0?'disabled':'') + '>Scegli un film</button></div>';
+      noteBox.innerHTML = res.list.length === 0 ? '<div class="note-box">Tutti i film disponibili sono già stati visti. Segna qualcosa come "da rivedere" nella Libreria, oppure attiva "includi film singoli già visti".</div>' : "";
+      var b = document.getElementById('btnRoll');
+      if (b) b.addEventListener('click', doPick);
+    } else {
+      var m = lastPicked;
+      var sagaBadge = m.saga ? '<span class="badge">' + escapeHtml(m.saga) + (m.order?(' #' + m.order):'') + '</span>' : '';
+      stage.innerHTML =
+        '<div class="reel">Stasera si guarda</div>' +
+        '<div class="film-title">' + escapeHtml(m.title) + '</div>' +
+        '<div class="film-meta">' + sagaBadge + '<span class="badge author">' + escapeHtml(authorsLabel(m.authors)) + '</span></div>' +
+        '<div class="actions" style="margin-top:24px;">' +
+          '<button class="btn btn-secondary" id="btnReroll">Nuovo Film</button>' +
+          '<button class="btn btn-primary" id="btnConfirm">Guardiamolo!</button>' +
+        '</div>';
+      document.getElementById('btnReroll').addEventListener('click', attemptReroll);
+      document.getElementById('btnConfirm').addEventListener('click', confirmWatched);
+    }
+  }
+
+  function doPick(){
+    var res = pickCandidate();
+    var noteBox = document.getElementById('constraintNote');
+    noteBox.innerHTML = res.note ? '<div class="note-box">' + escapeHtml(res.note) + '</div>' : "";
+    if (res.list.length === 0) { lastPicked = null; renderStage(); return; }
+    var idx = Math.floor(Math.random() * res.list.length);
+    lastPicked = res.list[idx];
+    renderStage();
+  }
+
+  var rerollStreak = 0;
+  function attemptReroll(){
+    rerollStreak++;
+    if (rerollStreak > 4) {
+      var ok = confirm('Avete già scartato qualche film di fila senza guardarlo. Volete cambiarlo ancora?');
+      if (!ok) { rerollStreak--; return; }
+    }
+    doPick();
+  }
+
+  function confirmWatched(){
+    if (!lastPicked) return;
+    var m = state.movies.find(function(x){ return x.id === lastPicked.id; });
+    if (m) m.watched = true;
+    state.history.push({ id: lastPicked.id, title: lastPicked.title, authors: (lastPicked.authors||[]).slice(), ts: Date.now() });
+    rerollStreak = 0;
+    save();
+    lastPicked = null;
+    renderAll();
+  }
+
+  function escapeHtml(s){
+    return String(s==null?"":s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  // ---------- Poster fetching ----------
+  // Wikipedia's REST API is explicitly designed for cross-origin browser use (unlike
+  // iTunes's search endpoint, which some networks/browsers block), so it's tried first.
+  function wikiSummaryImage(title, lang){
+    var url = 'https://' + lang + '.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(title);
+    return fetch(url).then(function(r){
+      if (!r.ok) throw new Error('wiki summary not found');
+      return r.json();
+    }).then(function(data){
+      return (data && data.thumbnail && data.thumbnail.source) ? data.thumbnail.source : null;
+    });
+  }
+  function wikiResolveTitle(title, lang){
+    var url = 'https://' + lang + '.wikipedia.org/w/api.php?action=opensearch&search=' +
+      encodeURIComponent(title) + '&limit=1&namespace=0&format=json&origin=*';
+    return fetch(url).then(function(r){ return r.json(); }).then(function(data){
+      return (data && data[1] && data[1][0]) ? data[1][0] : null;
+    });
+  }
+  function fetchPosterFromWikipedia(title, lang){
+    return wikiSummaryImage(title, lang).catch(function(){
+      return wikiResolveTitle(title, lang).then(function(resolved){
+        if (!resolved) return null;
+        return wikiSummaryImage(resolved, lang).catch(function(){ return null; });
+      });
+    });
+  }
+
+  // iTunes via JSONP (a <script> tag), kept as a secondary source for wider coverage.
+  var jsonpCounter = 0;
+  function itunesJsonp(url){
+    return new Promise(function(resolve, reject){
+      var cbName = 'itunesCb' + (jsonpCounter++) + '_' + Date.now();
+      var timeoutId = setTimeout(function(){ cleanup(); reject(new Error('itunes jsonp timeout')); }, 8000);
+      function cleanup(){
+        clearTimeout(timeoutId);
+        try { delete window[cbName]; } catch(e) { window[cbName] = undefined; }
+        if (script.parentNode) script.parentNode.removeChild(script);
+      }
+      window[cbName] = function(data){ cleanup(); resolve(data); };
+      var script = document.createElement('script');
+      script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + cbName;
+      script.onerror = function(){ cleanup(); reject(new Error('itunes jsonp script error')); };
+      document.body.appendChild(script);
+    });
+  }
+  function searchItunesPoster(title, country){
+    var url = 'https://itunes.apple.com/search?media=movie&limit=1&term=' + encodeURIComponent(title) + (country ? '&country=' + country : '');
+    return itunesJsonp(url).then(function(data){
+      var art = data && data.results && data.results[0] && data.results[0].artworkUrl100;
+      return art ? art.replace('100x100', '300x300') : null;
+    });
+  }
+
+  function fetchPosterForTitle(title){
+    return fetchPosterFromWikipedia(title, 'it').then(function(art){
+      if (art) return art;
+      return fetchPosterFromWikipedia(title, 'en');
+    }).then(function(art){
+      if (art) return art;
+      return searchItunesPoster(title, 'IT').catch(function(){ return null; });
+    }).then(function(art){
+      if (art) return art;
+      return searchItunesPoster(title, '').catch(function(){ return null; });
+    }).catch(function(){ return null; });
+  }
+  var posterQueue = [];
+  var posterQueueRunning = false;
+  function queuePosterFetch(m){
+    if (m.posterUrl || m.posterChecked) return;
+    posterQueue.push(m);
+    runPosterQueue();
+  }
+  function runPosterQueue(){
+    if (posterQueueRunning) return;
+    posterQueueRunning = true;
+    step();
+    function step(){
+      var m = posterQueue.shift();
+      if (!m) { posterQueueRunning = false; return; }
+      if (m.posterUrl || m.posterChecked) { step(); return; }
+      m.posterChecked = true;
+      fetchPosterForTitle(m.title)
+        .then(function(art){
+          if (art) {
+            m.posterUrl = art;
+            save();
+            var el = document.querySelector('[data-poster="' + m.id + '"]');
+            if (el) el.outerHTML = '<img class="poster" data-poster="' + m.id + '" src="' + escapeHtml(m.posterUrl) + '" alt="">';
+          }
+        })
+        .catch(function(e){ console.error('poster fetch failed', e); })
+        .then(function(){ setTimeout(step, 350); });
+    }
+  }
+
+  // ---------- Library ----------
+  var librarySearch = '';
+  var librarySort = 'default';
+
+  function renderLibrary(){
+    var list = document.getElementById('movieList');
+    var emptyMsg = document.getElementById('emptyLibMsg');
+    var pool = activeMovies();
+    document.getElementById('movieCount').textContent = pool.length + (pool.length===1?' film':' film');
+
+    document.getElementById('librarySortSelect').value = librarySort;
+
+    if (pool.length === 0) {
+      list.innerHTML = ""; emptyMsg.style.display = "block"; emptyMsg.textContent = "Nessun film ancora.";
+      return;
+    }
+
+    var q = librarySearch.trim().toLowerCase();
+    var filtered = !q ? pool : pool.filter(function(m){
+      return m.title.toLowerCase().indexOf(q) !== -1 ||
+             (m.authors||[]).join(' ').toLowerCase().indexOf(q) !== -1 ||
+             (m.saga||'').toLowerCase().indexOf(q) !== -1;
+    });
+
+    if (filtered.length === 0) {
+      list.innerHTML = ""; emptyMsg.style.display = "block";
+      emptyMsg.textContent = 'Nessun film trovato per "' + librarySearch + '".';
+      return;
+    }
+    emptyMsg.style.display = "none";
+
+    var sorted = filtered.slice();
+    if (librarySort === 'az') {
+      sorted.sort(function(a,b){ return a.title.localeCompare(b.title, 'it', { sensitivity: 'base' }); });
+    } else if (librarySort === 'za') {
+      sorted.sort(function(a,b){ return b.title.localeCompare(a.title, 'it', { sensitivity: 'base' }); });
+    } else {
+      sorted.sort(function(a,b){
+        var sa = normSaga(a.saga), sb = normSaga(b.saga);
+        if (sa !== sb) return sa.localeCompare(sb);
+        return (Number(a.order)||0) - (Number(b.order)||0);
+      });
+    }
+    list.innerHTML = sorted.map(function(m){
+      var posterHtml = m.posterUrl
+        ? '<img class="poster" data-poster="' + m.id + '" src="' + escapeHtml(m.posterUrl) + '" alt="">'
+        : '<div class="poster placeholder" data-poster="' + m.id + '" title="' + (m.posterChecked ? 'Nessuna copertina trovata' : 'In attesa di ricerca') + '">' + (m.posterChecked ? '🚫' : '🎬') + '</div>';
+      return '<div class="movie-row" data-id="' + m.id + '">' +
+        posterHtml +
+        '<div class="movie-info">' +
+        '<div><strong>' + escapeHtml(m.title) + '</strong></div>' +
+        '<div style="font-size:0.8rem;color:var(--muted);">' +
+          escapeHtml(authorsLabel(m.authors)) +
+          (m.saga ? ' · ' + escapeHtml(m.saga) + (m.order?(' #' + m.order):'') : '') +
+        '</div>' +
+        '<div class="row-foot">' +
+          '<span class="watched-pill ' + (m.watched?'yes':'no') + '">' + (m.watched?'Visto':'Da vedere') + '</span>' +
+          '<span>' +
+            '<button class="link-btn" data-act="edit">Modifica</button>' +
+            '<button class="link-btn muted" data-act="toggle">' + (m.watched?'Segna da vedere':'Segna visto') + '</button>' +
+            '<button class="link-btn" style="color:var(--wine-bright)" data-act="del">Elimina</button>' +
+          '</span>' +
+        '</div>' +
+        '</div>' +
+      '</div>';
+    }).join("");
+    sorted.forEach(queuePosterFetch);
+
+    list.querySelectorAll('.movie-row').forEach(function(row){
+      var id = row.getAttribute('data-id');
+      row.querySelectorAll('button').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var act = btn.getAttribute('data-act');
+          var m = state.movies.find(function(x){ return x.id === id; });
+          if (!m) return;
+          if (act === 'edit') openEdit(m);
+          if (act === 'toggle') { m.watched = !m.watched; save(); renderAll(); }
+          if (act === 'del') {
+            if (confirm('Eliminare "' + m.title + '"?')) {
+              var hasRatings = m.ratings && Object.keys(m.ratings).length > 0;
+              if (hasRatings) {
+                m.deletedFromLibrary = true;
+              } else {
+                state.movies = state.movies.filter(function(x){return x.id!==id;});
+              }
+              save(); renderAll();
+            }
+          }
+        });
+      });
+    });
+  }
+
+  (function fillOrderOptions(){
+    var sel = document.getElementById('editFieldOrder');
+    var opts = '';
+    for (var i = 1; i <= 100; i++) { opts += '<option value="' + i + '">' + i + '</option>'; }
+    sel.insertAdjacentHTML('beforeend', opts);
+  })();
+
+  // ---------- Edit dialog ----------
+  var editDialog = document.getElementById('editDialog');
+  var editingId = null;
+  function renderAuthorCheckboxes(selectedArr){
+    var container = document.getElementById('editAuthorsList');
+    var profiles = state.profiles || [];
+    if (profiles.length === 0) {
+      container.innerHTML = '<div style="font-size:0.82rem;color:var(--muted);">Nessun profilo creato ancora. Tocca "+ Nuovo profilo" per crearne uno.</div>';
+      return;
+    }
+    container.innerHTML = profiles.map(function(p){
+      var checked = selectedArr.indexOf(p) !== -1 ? 'checked' : '';
+      return '<label class="author-check"><input type="checkbox" value="' + escapeHtml(p) + '" ' + checked + '> ' + escapeHtml(p) + '</label>';
+    }).join('');
+  }
+
+  function openEdit(m){
+    editingId = m ? m.id : null;
+    document.getElementById('editTitle').textContent = m ? 'Modifica film' : 'Nuovo film';
+    document.getElementById('editFieldTitle').value = m ? m.title : '';
+    document.getElementById('editFieldSaga').value = m ? (m.saga||'') : '';
+    document.getElementById('editFieldOrder').value = m && m.order ? String(m.order) : '';
+    renderAuthorCheckboxes(m ? (m.authors||[]) : []);
+    editDialog.classList.add('open');
+  }
+  document.getElementById('editAddProfileInline').addEventListener('click', function(){
+    var name = prompt('Nome del nuovo profilo:');
+    if (!name) return;
+    name = name.trim();
+    if (!name) return;
+    state.profiles = state.profiles || [];
+    if (state.profiles.indexOf(name) === -1) { state.profiles.push(name); state.profiles.sort(); save(); }
+    var current = Array.prototype.map.call(document.querySelectorAll('#editAuthorsList input[type=checkbox]:checked'), function(cb){ return cb.value; });
+    current.push(name);
+    renderAuthorCheckboxes(current);
+  });
+  document.getElementById('btnAddMovie').addEventListener('click', function(){ openEdit(null); });
+  document.getElementById('librarySearch').addEventListener('input', function(e){
+    librarySearch = e.target.value;
+    renderLibrary();
+  });
+  document.getElementById('librarySortSelect').addEventListener('change', function(e){
+    librarySort = e.target.value;
+    renderLibrary();
+  });
+  document.getElementById('editCancel').addEventListener('click', function(){ editDialog.classList.remove('open'); });
+  editDialog.addEventListener('click', function(e){ if (e.target === editDialog) editDialog.classList.remove('open'); });
+  document.getElementById('editSave').addEventListener('click', function(){
+    var title = document.getElementById('editFieldTitle').value.trim();
+    if (!title) { alert('Serve almeno un titolo.'); return; }
+    var authors = Array.prototype.map.call(document.querySelectorAll('#editAuthorsList input[type=checkbox]:checked'), function(cb){ return cb.value; });
+    var saga = document.getElementById('editFieldSaga').value.trim();
+    var order = document.getElementById('editFieldOrder').value;
+    order = order === '' ? '' : Number(order);
+    if (editingId) {
+      var m = state.movies.find(function(x){ return x.id === editingId; });
+      if (m) { m.title = title; m.authors = authors; m.saga = saga; m.order = order; }
+    } else {
+      state.movies.push({ id: uid(), title: title, authors: authors, saga: saga, order: order, watched: false });
+    }
+    save();
+    editDialog.classList.remove('open');
+    renderAll();
+  });
+
+  // ---------- Import ----------
+  var mapDialog = document.getElementById('mapDialog');
+  document.getElementById('btnImport').addEventListener('click', function(){
+    document.getElementById('fileInput').click();
+  });
+  document.getElementById('fileInput').addEventListener('change', function(e){
+    var file = e.target.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(ev){
+      try {
+        var data = new Uint8Array(ev.target.result);
+        var wb = XLSX.read(data, { type: 'array' });
+        var sheet = wb.Sheets[wb.SheetNames[0]];
+        var rows = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: '' });
+        if (rows.length === 0) { alert('Il file sembra vuoto.'); return; }
+        var headers = rows[0].map(function(h){ return String(h).trim(); });
+        var dataRows = rows.slice(1).filter(function(r){ return r.some(function(c){ return String(c).trim() !== ''; }); });
+        pendingImport = { headers: headers, rows: dataRows };
+        fillMapSelectors(headers);
+        mapDialog.classList.add('open');
+      } catch(err) {
+        console.error(err);
+        alert('Non sono riuscito a leggere questo file. Controlla che sia un Excel (.xlsx) o CSV valido.');
+      }
+      document.getElementById('fileInput').value = '';
+    };
+    reader.readAsArrayBuffer(file);
+  });
+
+  function fillMapSelectors(headers){
+    var opts = '<option value="-1">— nessuna —</option>' + headers.map(function(h,i){ return '<option value="'+i+'">'+escapeHtml(h || ('Colonna ' + (i+1)))+'</option>'; }).join('');
+    ['mapTitle','mapAuthor','mapSaga','mapOrder'].forEach(function(id){
+      document.getElementById(id).innerHTML = opts;
+    });
+    // best-effort auto guess
+    headers.forEach(function(h, i){
+      var lh = h.toLowerCase();
+      if (/tit/.test(lh)) document.getElementById('mapTitle').value = i;
+      if (/autor|chi|inserit/.test(lh)) document.getElementById('mapAuthor').value = i;
+      if (/sag|serie|franchise/.test(lh)) document.getElementById('mapSaga').value = i;
+      if (/ordin|numero|episod|part/.test(lh)) document.getElementById('mapOrder').value = i;
+    });
+  }
+
+  document.getElementById('mapCancel').addEventListener('click', function(){ mapDialog.classList.remove('open'); pendingImport = null; });
+  mapDialog.addEventListener('click', function(e){ if (e.target === mapDialog) { mapDialog.classList.remove('open'); pendingImport = null; } });
+  document.getElementById('mapConfirm').addEventListener('click', function(){
+    if (!pendingImport) return;
+    var tIdx = Number(document.getElementById('mapTitle').value);
+    var aIdx = Number(document.getElementById('mapAuthor').value);
+    var sIdx = Number(document.getElementById('mapSaga').value);
+    var oIdx = Number(document.getElementById('mapOrder').value);
+    if (tIdx < 0) { alert('Devi indicare almeno la colonna del titolo.'); return; }
+
+    var added = 0;
+    pendingImport.rows.forEach(function(r){
+      var title = String(r[tIdx]||'').trim();
+      if (!title) return;
+      var authorsArr = aIdx >= 0 ? String(r[aIdx]||'').split(',').map(function(s){ return s.trim(); }).filter(Boolean) : [];
+      var saga = sIdx >= 0 ? String(r[sIdx]||'').trim() : '';
+      var order = oIdx >= 0 && r[oIdx] !== '' ? Number(r[oIdx]) : '';
+      // avoid exact duplicate titles
+      if (state.movies.some(function(m){ return m.title.toLowerCase() === title.toLowerCase(); })) return;
+      state.movies.push({ id: uid(), title: title, authors: authorsArr, saga: saga, order: order, watched: false });
+      added++;
+    });
+    normalizeState();
+    save();
+    mapDialog.classList.remove('open');
+    pendingImport = null;
+    renderAll();
+    alert(added + ' film importati.');
+  });
+
+  // ---------- Export ----------
+  document.getElementById('btnExportXlsx').addEventListener('click', function(){
+    var rows = state.movies.map(function(m){
+      return { Titolo: m.title, Autore: (m.authors||[]).join(', '), Saga: m.saga||'', Numero: m.order||'', Visto: m.watched?'Sì':'No' };
+    });
+    var ws = XLSX.utils.json_to_sheet(rows);
+    var wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Film');
+    var arrBuf = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+    var blob = new Blob([arrBuf], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+    offerDownload('film-lista.xlsx', blob);
+  });
+  document.getElementById('btnExportJson').addEventListener('click', function(){
+    var blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+    offerDownload('film-backup.json', blob);
+  });
+  document.getElementById('btnImportJson').addEventListener('click', function(){
+    document.getElementById('jsonInput').click();
+  });
+  document.getElementById('jsonInput').addEventListener('change', function(e){
+    var file = e.target.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(ev){
+      try {
+        var parsed = JSON.parse(ev.target.result);
+        if (!parsed || !Array.isArray(parsed.movies)) throw new Error('formato non valido');
+        var replace = confirm('Vuoi SOSTITUIRE la libreria attuale con questo backup? Annulla = unisce invece di sostituire.');
+        if (replace) {
+          state = {
+            movies: parsed.movies,
+            history: Array.isArray(parsed.history) ? parsed.history : [],
+            profiles: Array.isArray(parsed.profiles) ? parsed.profiles : []
+          };
+        } else {
+          var existingTitles = state.movies.map(function(m){ return m.title.toLowerCase(); });
+          parsed.movies.forEach(function(m){
+            if (existingTitles.indexOf((m.title||'').toLowerCase()) === -1) {
+              var authorsArr = Array.isArray(m.authors) ? m.authors : (m.author ? [m.author] : []);
+              state.movies.push({ id: uid(), title: m.title, authors: authorsArr, saga: m.saga||'', order: m.order||'', watched: !!m.watched, ratings: m.ratings||{} });
+            }
+          });
+          if (Array.isArray(parsed.history)) {
+            state.history = state.history.concat(parsed.history);
+            state.history.sort(function(a,b){ return (a.ts||0) - (b.ts||0); });
+          }
+          if (Array.isArray(parsed.profiles)) {
+            parsed.profiles.forEach(function(p){ if (state.profiles.indexOf(p) === -1) state.profiles.push(p); });
+          }
+        }
+        normalizeState();
+        save();
+        renderAll();
+        alert('Backup importato correttamente.');
+      } catch(err) {
+        console.error(err);
+        alert('Questo file non sembra un backup valido generato da questa app.');
+      }
+      document.getElementById('jsonInput').value = '';
+    };
+    reader.readAsText(file);
+  });
+  document.getElementById('btnResetWatched').addEventListener('click', function(){
+    if (!confirm('Segnare tutti i film come "da vedere"? Lo storico delle scelte non verrà cancellato.')) return;
+    state.movies.forEach(function(m){ m.watched = false; });
+    save(); renderAll();
+  });
+  document.getElementById('btnRetryPosters').addEventListener('click', function(){
+    state.movies.forEach(function(m){ if (!m.posterUrl) m.posterChecked = false; });
+    renderAll();
+  });
+
+  // ---------- History ----------
+  function renderHistory(){
+    var list = document.getElementById('histList');
+    var emptyMsg = document.getElementById('emptyHistMsg');
+    if (state.history.length === 0) { list.innerHTML = ''; emptyMsg.style.display = 'block'; return; }
+    emptyMsg.style.display = 'none';
+    var items = state.history.slice().reverse();
+    list.innerHTML = items.map(function(h, i){
+      var origIndex = state.history.length - 1 - i;
+      var d = new Date(h.ts);
+      var when = d.toLocaleDateString('it-IT', { day:'numeric', month:'short', year:'numeric' });
+      var mv = state.movies.find(function(x){ return x.id === h.id; });
+      var showRequeue = mv && mv.watched && !mv.deletedFromLibrary;
+      return '<div class="hist-item" data-idx="' + origIndex + '">' +
+        '<div><div>' + escapeHtml(h.title) + '</div><div class="when">' + when + '</div></div>' +
+        '<div style="display:flex;align-items:center;gap:10px;">' +
+          '<span class="who">' + escapeHtml(authorsLabel(h.authors)) + '</span>' +
+          (showRequeue ? '<button class="link-btn" data-act="requeue">Riaggiungi alla lista</button>' : '') +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    list.querySelectorAll('.hist-item').forEach(function(row){
+      var idx = Number(row.getAttribute('data-idx'));
+      var btn = row.querySelector('[data-act="requeue"]');
+      if (!btn) return;
+      btn.addEventListener('click', function(){
+        var entry = state.history[idx];
+        if (!entry) return;
+        state.history.splice(idx, 1);
+        var m = state.movies.find(function(x){ return x.id === entry.id; });
+        if (m) m.watched = false;
+        save();
+        renderAll();
+      });
+    });
+  }
+  document.getElementById('btnUndo').addEventListener('click', function(){
+    if (state.history.length === 0) return;
+    var last = state.history.pop();
+    var m = state.movies.find(function(x){ return x.id === last.id; });
+    if (m) m.watched = false;
+    save();
+    renderAll();
+  });
+
+  // ---------- Ratings ----------
+  function getAuthorsList(){
+    var set = {};
+    (state.profiles||[]).forEach(function(p){ if (p) set[p] = true; });
+    state.movies.forEach(function(m){ (m.authors||[]).forEach(function(a){ if (a) set[a] = true; }); });
+    return Object.keys(set).sort();
+  }
+  function computeAvg(m){
+    if (!m.ratings) return null;
+    var vals = Object.keys(m.ratings).map(function(k){ return m.ratings[k]; }).filter(function(v){ return v; });
+    if (vals.length === 0) return null;
+    var avg = vals.reduce(function(a,b){ return a+b; }, 0) / vals.length;
+    return Math.round(avg * 10) / 10;
+  }
+  function getLastWatchedTs(id){
+    var ts = null;
+    state.history.forEach(function(h){ if (h.id === id && (ts === null || h.ts > ts)) ts = h.ts; });
+    return ts;
+  }
+  function formatItDate(ts){
+    return new Date(ts).toLocaleDateString('it-IT', { day:'numeric', month:'short', year:'numeric' });
+  }
+
+  function renderRatings(){
+    var container = document.getElementById('ratingsList');
+    var emptyMsg = document.getElementById('emptyRatingsMsg');
+    var authors = getAuthorsList();
+    var watched = state.movies.filter(function(m){
+      return m.watched || (m.ratings && Object.keys(m.ratings).length > 0);
+    });
+
+    if (watched.length === 0) {
+      container.innerHTML = '';
+      emptyMsg.style.display = 'block';
+      emptyMsg.textContent = 'Nessun film visto ancora da valutare.';
+      return;
+    }
+    if (authors.length === 0) {
+      container.innerHTML = '';
+      emptyMsg.style.display = 'block';
+      emptyMsg.textContent = 'Nessun autore trovato nei tuoi film: aggiungi il campo Autore (in Libreria) per poter dare i voti.';
+      return;
+    }
+    emptyMsg.style.display = 'none';
+
+    container.innerHTML = watched.map(function(m){
+      var posterHtml = m.posterUrl
+        ? '<img class="poster" data-poster="' + m.id + '" src="' + escapeHtml(m.posterUrl) + '" alt="">'
+        : '<div class="poster placeholder" data-poster="' + m.id + '" title="' + (m.posterChecked ? 'Nessuna copertina trovata' : 'In attesa di ricerca') + '">' + (m.posterChecked ? '🚫' : '🎬') + '</div>';
+      var avg = computeAvg(m);
+      var watchedTs = getLastWatchedTs(m.id);
+      var dateHtml = watchedTs ? '<div class="when">Visto il ' + formatItDate(watchedTs) + '</div>' : '';
+      var archivedHtml = m.deletedFromLibrary ? '<div class="when" style="color:var(--wine-bright);">Rimosso dalla libreria — il voto resta salvato</div>' : '';
+      var rows = authors.map(function(a){
+        var val = (m.ratings && m.ratings[a]) ? m.ratings[a] : 0;
+        var btns = [1,2,3,4,5].map(function(n){
+          return '<button class="rate-btn' + (val===n?' active':'') + '" data-movie="' + m.id + '" data-person="' + escapeHtml(a) + '" data-val="' + n + '">' + n + '</button>';
+        }).join('');
+        return '<div class="rate-person"><span class="who-name">' + escapeHtml(a) + '</span><div class="rate-buttons">' + btns + '</div></div>';
+      }).join('');
+      return '<div class="movie-row rated-row" data-id="' + m.id + '">' +
+        '<button class="trash-btn" data-act="delrating" data-movie="' + m.id + '" aria-label="Rimuovi voto" title="Rimuovi voto">🗑️</button>' +
+        posterHtml +
+        '<div class="movie-info">' +
+        '<div><strong>' + escapeHtml(m.title) + '</strong>' + (avg ? ' <span class="badge avg-badge">★ ' + avg + '</span>' : '') + '</div>' +
+        dateHtml +
+        archivedHtml +
+        '<div class="rate-row">' + rows + '</div>' +
+        '</div></div>';
+    }).join('');
+    watched.forEach(queuePosterFetch);
+
+    container.querySelectorAll('.trash-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var id = btn.getAttribute('data-movie');
+        var m = state.movies.find(function(x){ return x.id === id; });
+        if (!m) return;
+        if (!confirm('Rimuovere tutti i voti dati a "' + m.title + '"?')) return;
+        m.ratings = {};
+        if (m.deletedFromLibrary) {
+          state.movies = state.movies.filter(function(x){ return x.id !== id; });
+        }
+        save();
+        renderAll();
+      });
+    });
+
+    container.querySelectorAll('.rate-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var id = btn.getAttribute('data-movie');
+        var person = btn.getAttribute('data-person');
+        var val = Number(btn.getAttribute('data-val'));
+        var m = state.movies.find(function(x){ return x.id === id; });
+        if (!m) return;
+        m.ratings = m.ratings || {};
+        if (m.ratings[person] === val) delete m.ratings[person];
+        else m.ratings[person] = val;
+        save();
+        renderRatings();
+      });
+    });
+  }
+
+  // ---------- Profiles ----------
+  var profilesDialog = document.getElementById('profilesDialog');
+  function renderProfilesList(){
+    var container = document.getElementById('profilesList');
+    var profiles = state.profiles || [];
+    if (profiles.length === 0) {
+      container.innerHTML = '<div style="font-size:0.85rem;color:var(--muted);">Nessun profilo ancora. Aggiungine uno qui sotto.</div>';
+      return;
+    }
+    container.innerHTML = profiles.map(function(p){
+      return '<div style="display:flex;align-items:center;justify-content:space-between;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;">' +
+        '<span>' + escapeHtml(p) + '</span>' +
+        '<button class="link-btn" style="color:var(--wine-bright)" data-profile="' + escapeHtml(p) + '">Elimina</button>' +
+      '</div>';
+    }).join('');
+    container.querySelectorAll('button[data-profile]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var name = btn.getAttribute('data-profile');
+        if (!confirm('Eliminare il profilo "' + name + '"? Verrà rimosso anche dai film e dai voti già assegnati.')) return;
+        state.profiles = state.profiles.filter(function(p){ return p !== name; });
+        state.movies.forEach(function(m){
+          if (Array.isArray(m.authors)) m.authors = m.authors.filter(function(a){ return a !== name; });
+          if (m.ratings && m.ratings[name] !== undefined) delete m.ratings[name];
+        });
+        save();
+        renderProfilesList();
+        renderAll();
+      });
+    });
+  }
+  function addProfileFromInput(){
+    var input = document.getElementById('newProfileName');
+    var name = input.value.trim();
+    if (!name) return;
+    state.profiles = state.profiles || [];
+    if (state.profiles.indexOf(name) !== -1) { alert('Questo profilo esiste già.'); return; }
+    state.profiles.push(name);
+    state.profiles.sort();
+    save();
+    input.value = '';
+    renderProfilesList();
+  }
+  document.getElementById('btnOpenProfiles').addEventListener('click', function(){
+    renderProfilesList();
+    profilesDialog.classList.add('open');
+  });
+  document.getElementById('profilesClose').addEventListener('click', function(){ profilesDialog.classList.remove('open'); });
+  profilesDialog.addEventListener('click', function(e){ if (e.target === profilesDialog) profilesDialog.classList.remove('open'); });
+  document.getElementById('btnAddProfile').addEventListener('click', addProfileFromInput);
+  document.getElementById('newProfileName').addEventListener('keydown', function(e){
+    if (e.key === 'Enter') { e.preventDefault(); addProfileFromInput(); }
+  });
+
+  // ---------- Burger menu ----------
+  var burgerBtn = document.getElementById('burgerBtn');
+  var burgerMenu = document.getElementById('burgerMenu');
+  burgerBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    burgerMenu.classList.toggle('open');
+  });
+  burgerMenu.addEventListener('click', function(e){ e.stopPropagation(); });
+  document.querySelectorAll('.burger-menu .menu-item').forEach(function(btn){
+    btn.addEventListener('click', function(){ burgerMenu.classList.remove('open'); });
+  });
+  document.addEventListener('click', function(){ burgerMenu.classList.remove('open'); });
+
+  // ---------- Tabs ----------
+  document.querySelectorAll('.tab-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('view-' + btn.getAttribute('data-view')).classList.add('active');
+    });
+  });
+
+  document.getElementById('includeWatched').addEventListener('change', function(){ lastPicked = null; renderStage(); });
+
+  function renderAll(){
+    renderStage();
+    renderLibrary();
+    renderHistory();
+    renderRatings();
+  }
+
+  load().then(function(){
+    renderAll();
+    initSync();
+  });
+})();
+</script>
+</body>
+</html>
