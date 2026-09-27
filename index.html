@@ -979,12 +979,31 @@
     });
   }
 
-  (function fillOrderOptions(){
+  function usedOrdersForSaga(sagaName, excludeId){
+    var key = normSaga(sagaName);
+    var used = {};
+    if (!key) return used;
+    state.movies.forEach(function(m){
+      if (m.id === excludeId) return;
+      if (normSaga(m.saga) === key && m.order !== '' && m.order !== null && m.order !== undefined) {
+        used[Number(m.order)] = true;
+      }
+    });
+    return used;
+  }
+  function refreshOrderOptions(){
     var sel = document.getElementById('editFieldOrder');
-    var opts = '';
-    for (var i = 1; i <= 100; i++) { opts += '<option value="' + i + '">' + i + '</option>'; }
-    sel.insertAdjacentHTML('beforeend', opts);
-  })();
+    var currentVal = sel.value;
+    var saga = document.getElementById('editFieldSaga').value;
+    var used = usedOrdersForSaga(saga, editingId);
+    var opts = '<option value="">— nessuno —</option>';
+    for (var i = 1; i <= 100; i++) {
+      if (used[i]) continue;
+      opts += '<option value="' + i + '">' + i + '</option>';
+    }
+    sel.innerHTML = opts;
+    sel.value = (currentVal && !used[Number(currentVal)]) ? currentVal : '';
+  }
 
   // ---------- Edit dialog ----------
   var editDialog = document.getElementById('editDialog');
@@ -1032,11 +1051,13 @@
       item.addEventListener('click', function(){
         document.getElementById('editFieldSaga').value = item.getAttribute('data-saga');
         hideSagaSuggestions();
+        refreshOrderOptions();
       });
     });
   }
   document.getElementById('editFieldSaga').addEventListener('input', function(e){
     renderSagaSuggestions(e.target.value);
+    refreshOrderOptions();
   });
   document.getElementById('editFieldSaga').addEventListener('blur', function(){
     setTimeout(hideSagaSuggestions, 150); // delay so a tap on a suggestion still registers
@@ -1047,6 +1068,7 @@
     document.getElementById('editTitle').textContent = m ? 'Modifica film' : 'Nuovo film';
     document.getElementById('editFieldTitle').value = m ? m.title : '';
     document.getElementById('editFieldSaga').value = m ? (m.saga||'') : '';
+    refreshOrderOptions();
     document.getElementById('editFieldOrder').value = m && m.order ? String(m.order) : '';
     renderAuthorCheckboxes(m ? (m.authors||[]) : []);
     hideSagaSuggestions();
