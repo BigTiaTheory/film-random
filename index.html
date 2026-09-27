@@ -204,6 +204,7 @@
     width: 46px; height: 66px; object-fit: contain; border-radius: 6px;
     background: var(--surface-2); flex-shrink: 0;
   }
+  .poster.fit-cover { object-fit: cover; }
   .poster.placeholder {
     display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
   }
@@ -763,6 +764,14 @@
       return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
     });
   }
+  // Once a poster image actually loads, check its real proportions: if it's already
+  // portrait-shaped (a genuine poster crop), let it fill the frame edge-to-edge;
+  // otherwise leave it fully visible (letterboxed) so nothing gets cropped oddly.
+  window.__fitPoster = function(img){
+    if (img.naturalWidth && img.naturalHeight && (img.naturalHeight / img.naturalWidth) >= 1.15) {
+      img.classList.add('fit-cover');
+    }
+  };
 
   // ---------- Poster fetching ----------
   // Wikipedia's REST API is explicitly designed for cross-origin browser use (unlike
@@ -819,15 +828,15 @@
   }
 
   function fetchPosterForTitle(title){
-    return fetchPosterFromWikipedia(title, 'it').then(function(art){
-      if (art) return art;
-      return fetchPosterFromWikipedia(title, 'en');
-    }).then(function(art){
-      if (art) return art;
-      return searchItunesPoster(title, 'IT').catch(function(){ return null; });
-    }).then(function(art){
+    return searchItunesPoster(title, 'IT').catch(function(){ return null; }).then(function(art){
       if (art) return art;
       return searchItunesPoster(title, '').catch(function(){ return null; });
+    }).then(function(art){
+      if (art) return art;
+      return fetchPosterFromWikipedia(title, 'it');
+    }).then(function(art){
+      if (art) return art;
+      return fetchPosterFromWikipedia(title, 'en');
     }).catch(function(){ return null; });
   }
   var posterQueue = [];
@@ -852,7 +861,7 @@
             m.posterUrl = art;
             save();
             var el = document.querySelector('[data-poster="' + m.id + '"]');
-            if (el) el.outerHTML = '<img class="poster" data-poster="' + m.id + '" src="' + escapeHtml(m.posterUrl) + '" alt="">';
+            if (el) el.outerHTML = '<img class="poster" data-poster="' + m.id + '" src="' + escapeHtml(m.posterUrl) + '" alt="" onload="window.__fitPoster(this)">';
           }
         })
         .catch(function(e){ console.error('poster fetch failed', e); })
@@ -905,7 +914,7 @@
     }
     list.innerHTML = sorted.map(function(m){
       var posterHtml = m.posterUrl
-        ? '<img class="poster" data-poster="' + m.id + '" src="' + escapeHtml(m.posterUrl) + '" alt="">'
+        ? '<img class="poster" data-poster="' + m.id + '" src="' + escapeHtml(m.posterUrl) + '" alt="" onload="window.__fitPoster(this)">'
         : '<div class="poster placeholder" data-poster="' + m.id + '" title="' + (m.posterChecked ? 'Nessuna copertina trovata' : 'In attesa di ricerca') + '">' + (m.posterChecked ? '🚫' : '🎬') + '</div>';
       return '<div class="movie-row" data-id="' + m.id + '">' +
         posterHtml +
@@ -1265,7 +1274,7 @@
 
     container.innerHTML = watched.map(function(m){
       var posterHtml = m.posterUrl
-        ? '<img class="poster" data-poster="' + m.id + '" src="' + escapeHtml(m.posterUrl) + '" alt="">'
+        ? '<img class="poster" data-poster="' + m.id + '" src="' + escapeHtml(m.posterUrl) + '" alt="" onload="window.__fitPoster(this)">'
         : '<div class="poster placeholder" data-poster="' + m.id + '" title="' + (m.posterChecked ? 'Nessuna copertina trovata' : 'In attesa di ricerca') + '">' + (m.posterChecked ? '🚫' : '🎬') + '</div>';
       var avg = computeAvg(m);
       var watchedTs = getLastWatchedTs(m.id);
