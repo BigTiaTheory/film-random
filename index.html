@@ -223,6 +223,19 @@
 
   .field-label { font-size: 0.68rem; color: var(--muted); margin-bottom: 2px; display: block; }
 
+  .saga-suggestions {
+    display: none; position: absolute; top: 100%; left: 0; right: 0; margin-top: 4px;
+    background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px;
+    overflow: hidden; z-index: 20; max-height: 180px; overflow-y: auto;
+  }
+  .saga-suggestions.open { display: block; }
+  .saga-suggestions .sugg-item {
+    padding: 10px 12px; font-size: 0.9rem; color: var(--text); cursor: pointer;
+    border-bottom: 1px solid var(--line);
+  }
+  .saga-suggestions .sugg-item:last-child { border-bottom: none; }
+  .saga-suggestions .sugg-item:active { background: var(--surface); }
+
   .authors-check-list { display: flex; flex-direction: column; gap: 8px; margin: 6px 0 10px; }
   .author-check { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--text); }
   .author-check input { accent-color: var(--gold); width: 17px; height: 17px; }
@@ -414,7 +427,11 @@
         <div id="editAuthorsList" class="authors-check-list"></div>
         <button type="button" class="link-btn" id="editAddProfileInline">+ Nuovo profilo</button>
       </div>
-      <div><label class="field-label">Saga (opzionale)</label><input id="editFieldSaga" type="text"></div>
+      <div style="position:relative;">
+        <label class="field-label">Saga (opzionale)</label>
+        <input id="editFieldSaga" type="text" autocomplete="off">
+        <div id="sagaSuggestions" class="saga-suggestions"></div>
+      </div>
         <div><label class="field-label">Numero nella saga (opzionale)</label>
           <select id="editFieldOrder"><option value="">— nessuno —</option></select>
         </div>
@@ -985,6 +1002,46 @@
     }).join('');
   }
 
+  function getSagaList(){
+    var seen = {};
+    var list = [];
+    state.movies.forEach(function(m){
+      var s = (m.saga||'').trim();
+      if (!s) return;
+      var key = s.toLowerCase();
+      if (!seen[key]) { seen[key] = true; list.push(s); }
+    });
+    return list.sort(function(a,b){ return a.localeCompare(b, 'it', { sensitivity: 'base' }); });
+  }
+  function hideSagaSuggestions(){
+    var box = document.getElementById('sagaSuggestions');
+    box.classList.remove('open');
+    box.innerHTML = '';
+  }
+  function renderSagaSuggestions(query){
+    var box = document.getElementById('sagaSuggestions');
+    var q = query.trim().toLowerCase();
+    if (!q) { hideSagaSuggestions(); return; }
+    var matches = getSagaList().filter(function(s){ return s.toLowerCase().indexOf(q) !== -1; }).slice(0, 6);
+    if (matches.length === 0) { hideSagaSuggestions(); return; }
+    box.innerHTML = matches.map(function(s){
+      return '<div class="sugg-item" data-saga="' + escapeHtml(s) + '">' + escapeHtml(s) + '</div>';
+    }).join('');
+    box.classList.add('open');
+    box.querySelectorAll('.sugg-item').forEach(function(item){
+      item.addEventListener('click', function(){
+        document.getElementById('editFieldSaga').value = item.getAttribute('data-saga');
+        hideSagaSuggestions();
+      });
+    });
+  }
+  document.getElementById('editFieldSaga').addEventListener('input', function(e){
+    renderSagaSuggestions(e.target.value);
+  });
+  document.getElementById('editFieldSaga').addEventListener('blur', function(){
+    setTimeout(hideSagaSuggestions, 150); // delay so a tap on a suggestion still registers
+  });
+
   function openEdit(m){
     editingId = m ? m.id : null;
     document.getElementById('editTitle').textContent = m ? 'Modifica film' : 'Nuovo film';
@@ -992,6 +1049,7 @@
     document.getElementById('editFieldSaga').value = m ? (m.saga||'') : '';
     document.getElementById('editFieldOrder').value = m && m.order ? String(m.order) : '';
     renderAuthorCheckboxes(m ? (m.authors||[]) : []);
+    hideSagaSuggestions();
     editDialog.classList.add('open');
   }
   document.getElementById('editAddProfileInline').addEventListener('click', function(){
