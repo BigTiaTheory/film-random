@@ -195,21 +195,21 @@
   .card h2 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.05rem; margin: 0 0 12px; }
 
   .movie-row {
-    display: flex; gap: 12px; align-items: flex-start;
-    border-bottom: 1px solid var(--line); padding: 12px 0;
+    display: flex; flex-direction: column;
+    border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+    background: var(--surface-2); margin-bottom: 14px; position: relative;
   }
-  .movie-row:last-child { border-bottom: none; }
-  .movie-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+  .poster-wrap { width: 100%; aspect-ratio: 16 / 9; background: var(--bg); overflow: hidden; }
+  .movie-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; padding: 12px 14px 14px; }
   .poster {
-    width: 46px; height: 66px; object-fit: contain; border-radius: 6px;
-    background: var(--surface-2); flex-shrink: 0;
+    width: 100%; height: 100%; object-fit: contain; display: block;
   }
   .poster.fit-cover { object-fit: cover; }
   .poster.placeholder {
-    display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+    display: flex; align-items: center; justify-content: center; font-size: 2.1rem;
   }
   .movie-row input, .movie-row select {
-    background: var(--surface-2); border: 1px solid var(--line); color: var(--text);
+    background: var(--surface); border: 1px solid var(--line); color: var(--text);
     padding: 8px 10px; border-radius: 8px; font-family: inherit; width: 100%;
   }
   .row-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 6px; }
@@ -271,7 +271,7 @@
   .rate-btn.active { background: var(--gold); color: #241c0d; border-color: var(--gold); }
   .avg-badge { border-color: var(--gold); color: var(--gold); }
 
-  .rated-row { position: relative; padding-right: 42px; }
+  .rated-row { position: relative; }
   .trash-btn {
     position: absolute; top: 10px; right: 10px;
     background: var(--surface-2); border: 1px solid var(--line); color: var(--wine-bright);
@@ -781,11 +781,10 @@
       return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
     });
   }
-  // Once a poster image actually loads, check its real proportions: if it's already
-  // portrait-shaped (a genuine poster crop), let it fill the frame edge-to-edge;
-  // otherwise leave it fully visible (letterboxed) so nothing gets cropped oddly.
+  // In the landscape thumbnail box: a wide/landscape image fills the frame edge-to-edge;
+  // a tall/portrait one stays fully visible (letterboxed) so it isn't cropped down to a sliver.
   window.__fitPoster = function(img){
-    if (img.naturalWidth && img.naturalHeight && (img.naturalHeight / img.naturalWidth) >= 1.15) {
+    if (img.naturalWidth && img.naturalHeight && img.naturalWidth >= img.naturalHeight) {
       img.classList.add('fit-cover');
     }
   };
@@ -934,7 +933,7 @@
         ? '<img class="poster" data-poster="' + m.id + '" src="' + escapeHtml(m.posterUrl) + '" alt="" onload="window.__fitPoster(this)">'
         : '<div class="poster placeholder" data-poster="' + m.id + '" title="' + (m.posterChecked ? 'Nessuna copertina trovata' : 'In attesa di ricerca') + '">' + (m.posterChecked ? '🚫' : '🎬') + '</div>';
       return '<div class="movie-row" data-id="' + m.id + '">' +
-        posterHtml +
+        '<div class="poster-wrap">' + posterHtml + '</div>' +
         '<div class="movie-info">' +
         '<div><strong>' + escapeHtml(m.title) + '</strong></div>' +
         '<div style="font-size:0.8rem;color:var(--muted);">' +
@@ -1369,7 +1368,7 @@
       }).join('');
       return '<div class="movie-row rated-row" data-id="' + m.id + '">' +
         '<button class="trash-btn" data-act="delrating" data-movie="' + m.id + '" aria-label="Rimuovi voto" title="Rimuovi voto">🗑️</button>' +
-        posterHtml +
+        '<div class="poster-wrap">' + posterHtml + '</div>' +
         '<div class="movie-info">' +
         '<div><strong>' + escapeHtml(m.title) + '</strong>' + (avg ? ' <span class="badge avg-badge">★ ' + avg + '</span>' : '') + '</div>' +
         dateHtml +
